@@ -1,6 +1,6 @@
 # DragonTale
 
-An amazing 2D Dragon Tale game made with C++ and SFML
+A 2D Platformer game "Dragon Tale" made with C++ and SFML
 
 ## Installation
 
