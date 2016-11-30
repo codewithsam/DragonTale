@@ -31,6 +31,9 @@
     <Filter Include="Source Files\TileMap">
       <UniqueIdentifier>{d750ac52-9d7f-497c-8358-15e6dc3927fd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Entity\Enemies">
+      <UniqueIdentifier>{89e4051f-85b1-44f4-8651-05130038be2d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h">
@@ -69,6 +72,12 @@
     <ClInclude Include="FireBall.h">
       <Filter>Header Files\Entity</Filter>
     </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Slugger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -100,6 +109,12 @@
     </ClCompile>
     <ClCompile Include="MenuState.cpp">
       <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Slugger.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

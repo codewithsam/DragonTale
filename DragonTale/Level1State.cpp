@@ -9,6 +9,12 @@ void Level1State::Update(sf::RenderWindow * window, float frametime) {
 	player->Update(frametime);
 	tileMap.setPosition(((WINWIDTH*WINSCALE) / 2 - player->getX()) , ((WINHEIGHT*WINSCALE) / 2 - player->getY()));
 	background.setPosition(tileMap.getX(), tileMap.getY());
+
+	//update all enemies
+
+	for (int i = 0; i < enemies.size(); i++) {
+		enemies[i]->Update(frametime);
+	}
 }
 
 void Level1State::Draw(sf::RenderWindow * window) {
@@ -18,6 +24,10 @@ void Level1State::Draw(sf::RenderWindow * window) {
 	tileMap.Draw(window);
 	//draw player
 	player->Draw(window);
+	//draw enemies
+	for (int i = 0; i < enemies.size(); i++) {
+		enemies[i]->Draw(window);
+	}
 }
 
 void Level1State::Init() {
@@ -26,6 +36,9 @@ void Level1State::Init() {
 	tileMap.setPosition((double)0, (double)0);
 	player = new Player(tileMap);
 	player->setPosition(100, 100);
+	s = new Slugger(tileMap);
+	s->setPosition(100, 100);
+	enemies.push_back(s);
 }
 
 void Level1State::KeyPressed(sf::Keyboard::Key key) {

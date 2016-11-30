@@ -4,6 +4,7 @@
 #include "TileMap.h"
 #include "Background.h"
 #include "Player.h"
+#include "Slugger.h"
 
 
 class Level1State: public GameState {
@@ -20,5 +21,7 @@ private:
 	TileMap tileMap;
 	Background background;
 	Player *player;
+	std::vector<Enemy*> enemies;
+	Slugger *s;
 };
 
