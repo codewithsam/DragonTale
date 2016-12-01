@@ -34,8 +34,7 @@ The project requires SFML 2.x to be compiled. If you don't have it installed yet
 
 ## What next ?
 
-* Death of player
-* Adding enemies
+* ~~Death of player~~ (player flinch on colliding with enemy. Dead animations yet to come).
 * Reading of TiledMap Editor's XML file format directly for loading of maps.
 * Cool new levels
 * Final Boss Raid in each level
