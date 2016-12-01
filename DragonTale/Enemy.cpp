@@ -7,7 +7,7 @@ Enemy::Enemy(TileMap &tm): MapObject(tm) {
 }
 
 bool Enemy::isDead() {
-	return false;
+	return dead;
 }
 
 int Enemy::getDamage() {

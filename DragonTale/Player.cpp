@@ -61,6 +61,32 @@ void Player::setFiring() { firing = true; }
 void Player::setScratching() { scratching = true; }
 void Player::setGliding(bool b) { gliding = b; }
 
+void Player::checkAttack(std::vector<Enemy*>& enemies) {
+	for (int i = 0; i < enemies.size(); i++) {
+		Enemy *e = enemies[i];
+		if (scratching) {
+			if (facingRight) {
+				if (e->getX() > x && e->getX() < x + scratchRange && e->getY() > y - height / 2 && e->getY() < y + height / 2) {
+					e->hit(scratchDamage);
+				}
+			}
+			else {
+				if (e->getX() < x && e->getX()>x-scratchRange&&e->getY()>y-height/2 && e->getY()<y+height/2 ){
+					e->hit(scratchDamage);
+				}
+			}
+		}
+		for (int j = 0; j < fireballs.size(); j++) {
+			if (fireballs[j]->intersects(*e)) {
+				e->hit(fireBallDamage);
+				fireballs[j]->setHit();
+				break;
+			}
+			
+		}
+	}
+}
+
 void Player::getNextPosition() {
 	//movement
 	if (left) {

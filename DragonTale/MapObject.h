@@ -11,7 +11,7 @@ public:
 		tileSize = tm.getTileSize();
 	}
 
-	bool intersects(MapObject o) {
+	bool intersects(MapObject &o) {
 		sf::RectangleShape r1 = *getRectangle();
 		sf::RectangleShape r2 = *o.getRectangle();
 		return r1.getGlobalBounds().intersects(o.getRectangle()->getGlobalBounds());

@@ -10,10 +10,17 @@ void Level1State::Update(sf::RenderWindow * window, float frametime) {
 	tileMap.setPosition(((WINWIDTH*WINSCALE) / 2 - player->getX()) , ((WINHEIGHT*WINSCALE) / 2 - player->getY()));
 	background.setPosition(tileMap.getX(), tileMap.getY());
 
+	//attack enemies
+	player->checkAttack(enemies);
+	
 	//update all enemies
 
 	for (int i = 0; i < enemies.size(); i++) {
 		enemies[i]->Update(frametime);
+		if (enemies[i]->isDead()) {
+			enemies.erase(enemies.begin() + i);
+			i--;
+		}
 	}
 }
 

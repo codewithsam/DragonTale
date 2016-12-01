@@ -1,6 +1,7 @@
 #pragma once
 #include "MapObject.h"
 #include "FireBall.h"
+#include "Enemy.h"
 class Player: public MapObject {
 public:
 	Player(TileMap& tm);
@@ -12,7 +13,7 @@ public:
 	void setFiring();
 	void setScratching();
 	void setGliding(bool b);
-
+	void checkAttack(std::vector<Enemy*>&enemies);
 	void getNextPosition();
 
 	void Update(float frametime);
