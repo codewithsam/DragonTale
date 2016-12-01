@@ -4,15 +4,15 @@
 Player::Player(TileMap& tm): MapObject(tm) {
 	width = 30;
 	height = 30;
-	cWidth = 20;
-	cHeight = 20;
+	cWidth = 30;
+	cHeight = 30;
 
 	moveSpeed = 0.3;
 	maxSpeed = 1.6;
 	stopSpeed = 0.4;
 	fallSpeed = 0.15;
-	maxFallSpeed = 4.0;
-	jumpStart = -5.5;
+	maxFallSpeed = 8.0;
+	jumpStart = -6.9;
 	stopJumpSpeed = 0.3;
 
 	facingRight= true;

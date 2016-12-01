@@ -39,12 +39,42 @@ void Level1State::Draw(sf::RenderWindow * window) {
 
 void Level1State::Init() {
 	tileMap.LoadTiles("Resources/Tilesets/grasstileset.png");
-	tileMap.LoadMap("Resources/Maps/level1-1.map");
+	tileMap.LoadMap("Resources/Maps/one.map");
 	tileMap.setPosition((double)0, (double)0);
 	player = new Player(tileMap);
-	player->setPosition(100, 100);
+	player->setPosition(100, 400);
+
 	s = new Slugger(tileMap);
-	s->setPosition(100, 100);
+	s->left = true;
+	s->setPosition(300, 530);
+	enemies.push_back(s);
+
+	s = new Slugger(tileMap);
+	s->setPosition(1110, 420);
+	enemies.push_back(s);
+
+	s = new Slugger(tileMap);
+	s->left = true;
+	s->setPosition(1530, 420);
+	enemies.push_back(s);
+
+	s = new Slugger(tileMap);
+	s->setPosition(1890, 600);
+	enemies.push_back(s);
+
+	s = new Slugger(tileMap);
+	s->setPosition(1990, 600);
+	s->right = true;
+	enemies.push_back(s);
+
+	s = new Slugger(tileMap);
+	s->setPosition(2260, 600);
+	s->left = true;
+	enemies.push_back(s);
+
+	s = new Slugger(tileMap);
+	s->setPosition(2400, 600);
+	s->left = true;
 	enemies.push_back(s);
 }
 
