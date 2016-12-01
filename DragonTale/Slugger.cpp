@@ -84,7 +84,7 @@ void Slugger::Update(float frametime) {
 }
 
 void Slugger::Draw(sf::RenderWindow * window) {
-	if (notOnScreen()) return;
+	//if (notOnScreen()) return;
 	setMapPosition();
 
 

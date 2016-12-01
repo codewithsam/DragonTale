@@ -82,9 +82,20 @@ void Player::checkAttack(std::vector<Enemy*>& enemies) {
 				fireballs[j]->setHit();
 				break;
 			}
-			
+		}
+		if (intersects(*e)) {
+			hit(e->getDamage());
 		}
 	}
+}
+
+void Player::hit(int damage) {
+	if (flinching) return;
+	health -= damage;
+	if (health < 0) health = 0;
+	if (health == 0) dead = true;
+	flinching = true;
+	clock.restart();
 }
 
 void Player::getNextPosition() {
@@ -177,6 +188,13 @@ void Player::Update(float frametime) {
 		if (fireballs[i]->shouldRemove()) {
 			fireballs.erase(fireballs.begin() + i);
 			i--;
+		}
+	}
+
+	if (flinching) {
+		long elapsed = clock.getElapsedTime().asMilliseconds();
+		if (elapsed > 1000) {
+			flinching = false;
 		}
 	}
 

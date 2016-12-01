@@ -15,7 +15,7 @@ public:
 	void setGliding(bool b);
 	void checkAttack(std::vector<Enemy*>&enemies);
 	void getNextPosition();
-
+	void hit(int damage);
 	void Update(float frametime);
 	void Draw(sf::RenderWindow *window);
 
