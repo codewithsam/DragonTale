@@ -39,6 +39,6 @@ The project requires SFML 2.x to be compiled. If you don't have it installed yet
 * Cool new levels
 * Final Boss Raid in each level
 
-[Click HERE FOR DEMO VIDEO](https://sendvid.com/q4mr1j1r) 
+[Click HERE FOR DEMO VIDEO](https://sendvid.com/q4mr1j1r) (Note: lag in the video is because of the screen recorder, game runs fine.)
 
 > Thanks to ForeignGuyMike for game tutorials and resources.
