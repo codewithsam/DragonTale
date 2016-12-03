@@ -38,3 +38,7 @@ The project requires SFML 2.x to be compiled. If you don't have it installed yet
 * Reading of TiledMap Editor's XML file format directly for loading of maps.
 * Cool new levels
 * Final Boss Raid in each level
+
+[Click HERE FOR DEMO VIDEO](https://sendvid.com/q4mr1j1r) 
+
+> Thanks to ForeignGuyMike for game tutorials and resources.
