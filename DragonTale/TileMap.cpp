@@ -16,7 +16,6 @@ void TileMap::LoadTiles(std::string s) {
 	if (!tileTexture.loadFromFile(s)) {}
 	tileset.setTexture(tileTexture);
 	numTilesAcross = tileset.getGlobalBounds().width / tileSize;
-	std::cout << numTilesAcross << std::endl;
 	for (int col = 0; col < numTilesAcross; col++) {
 		if (col == 6 || col == 7 || col==8) {
 			sp = new sf::Sprite();
